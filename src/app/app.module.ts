@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainHeaderComponent } from './header/main-header/main-header.component';
 import { Http404ViewComponent } from './http-404-view/http-404-view.component';
-import { FilesService } from './shared/data-utils/files.service';
+import { DataService } from './shared/data-utils/data.service';
 import { UIUtilsService } from './shared/ui-utils/ui-utils.service';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { UIUtilsService } from './shared/ui-utils/ui-utils.service';
     AppRoutingModule
   ],
   providers: [
-    FilesService,
+    DataService,
     UIUtilsService
   ],
   bootstrap: [AppComponent]

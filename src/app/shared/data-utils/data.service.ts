@@ -3,10 +3,10 @@ import { Injectable } from "@angular/core";
 @Injectable({
   providedIn: "root"
 })
-export class FilesService {
+export class DataService {
 
   // simulate getting data from API
-  async getFiles() {
+  async getData() {
     return fetch("../../assets/mock/files.json")
       .then(response => {
         return response.json();

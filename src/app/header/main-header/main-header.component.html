@@ -1,8 +1,18 @@
 <nav class="main-header">
-    <a id="home" routerLink="/home" class="home-button nav-button">
+    <div 
+        id="home"
+        role="button"
+        class="home-button nav-button"
+        (click)="onClickHome()"
+    >
         <img src="../../assets/home.png" />
-    </a>
-    <a id="test-404" routerLink="/wrong-link" class="nav-button">
+    </div>
+    <div
+        id="test-404"
+        role="button"
+        class="nav-button"
+        (click)="onClick404()"
+    >
         <p>Test 404</p>
-    </a>
+    </div>
 </nav>
