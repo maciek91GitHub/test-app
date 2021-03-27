@@ -1,3 +1,5 @@
+@import "./shared/main-variables.less"; 
+
 * {
     color: rgb(27, 27, 27);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -5,11 +7,10 @@
 }
 
 .loading-mask {
+    .width-and-heigth-100();
     background-color: rgba(102, 102, 102, 0.6);
-    height: 100%;
     left: 0;
     position: fixed;
-    width: 100%;
     top: 0;
 
     & .loading-mask-content {

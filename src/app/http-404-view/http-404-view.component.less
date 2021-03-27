@@ -1,0 +1,16 @@
+@import "../shared/main-variables.less"; 
+
+:host {
+    .width-and-heigth-100();
+    color: @error-text-color;
+    flex-flow: column nowrap;
+
+    & .http-404-container {
+        .width-and-heigth-100();
+        text-align: center;
+    }
+
+    & h1 {
+        font-size: 50px;
+    }
+}

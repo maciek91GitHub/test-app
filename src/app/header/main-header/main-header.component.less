@@ -1,6 +1,8 @@
+@import "../../shared/main-variables.less"; 
+
 .main-header {
-    background-color: rgb(38, 16, 117);
-    color: rgb(240, 248, 255);
+    background-color: @primary-color;
+    color: @primary-text-color;
     display: flex;
     flex-flow: nowrap row;
     font-weight: bold;
@@ -8,11 +10,33 @@
     width: 100%;
 
     & .nav-button {
+        display: inline-block;
+        font-size: @header-text-size;
         height: 50px;
-        width: 200px;
+        margin-right: 10px;
+        width: 150px;
+        text-align: center;
+        text-decoration: none;
+
+        & p {
+            margin-top: 10px;
+        }
+
+        &.home-button {
+            width: 50px;
+
+            & img {
+                height: 45px;
+                width: 45px;
+            }
+        }
 
         &:hover {
-            background-color: rgba(0, 0, 0, 0.178);
+            background-color: rgb(38, 16, 117);
+        }
+
+        &:visited {
+            color: inherit;
         }
     }
 }

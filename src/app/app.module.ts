@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainHeaderComponent } from './header/main-header/main-header.component';
-import { BadRequestViewComponent } from './bad-request/bad-request.component';
+import { Http404ViewComponent } from './http-404-view/http-404-view.component';
 import { FilesService } from './shared/data-utils/files.service';
 import { UIUtilsService } from './shared/ui-utils/ui-utils.service';
 
@@ -12,7 +12,7 @@ import { UIUtilsService } from './shared/ui-utils/ui-utils.service';
   declarations: [
     AppComponent,
     MainHeaderComponent,
-    BadRequestViewComponent
+    Http404ViewComponent
   ],
   imports: [
     BrowserModule,

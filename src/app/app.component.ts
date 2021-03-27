@@ -15,14 +15,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   constructor (private uiUtilsService: UIUtilsService) { }
 
-  
-
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void { }
 
   ngAfterViewInit(): void {
-    console.log(this.loadingMask);
     const uiOptions = new UIOptions();
     uiOptions.loadingMask = this.loadingMask;
     this.uiUtilsService.initializeUIUtilsService(uiOptions);
