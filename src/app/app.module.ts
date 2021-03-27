@@ -4,22 +4,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainHeaderComponent } from './header/main-header/main-header.component';
-import { MainViewComponent } from './main-view/main-view.component';
-import { FilesService } from './shared/utils/files.service';
-import { ShowHideDirective } from './show-hide.directive';
+import { BadRequestViewComponent } from './bad-request/bad-request.component';
+import { FilesService } from './shared/data-utils/files.service';
+import { UIUtilsService } from './shared/ui-utils/ui-utils.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainHeaderComponent,
-    MainViewComponent,
-    ShowHideDirective
+    BadRequestViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [FilesService],
+  providers: [
+    FilesService,
+    UIUtilsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

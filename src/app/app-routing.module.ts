@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainViewComponent } from './main-view/main-view.component';
+import { BadRequestViewComponent } from './bad-request/bad-request.component';
 import { WelcomeViewComponent } from './welcome-view/welcome-view.component';
 
 const routes: Routes = [
-  
   { path: 'home', component: WelcomeViewComponent },
-  { path: '**', component: MainViewComponent }
+  { path: '**', component: BadRequestViewComponent }
 ];
 
 @NgModule({

@@ -1,18 +1,21 @@
-import { Injectable } from "@angular/core";
+import { ElementRef, Injectable } from "@angular/core";
+import { UIOptions } from "../ui-options.model";
 
 @Injectable({
   providedIn: "root"
 })
-export class FilesService {
+export class UIUtilsService {
 
-  // simulate getting data from API
-  async getFiles() {
-    return fetch("../../assets/mock/files.json")
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        return json;
-      });
+  globalElements: UIOptions;
+
+  initializeUIUtilsService (globalElements: UIOptions) {
+    console.log(globalElements);
+    this.globalElements = globalElements;
   }
+
+  showLoading (isShow) {
+    console.log(isShow);
+    this.globalElements.loadingMask.nativeElement.style.display = isShow ? 'block' : 'none';
+  }
+
 }

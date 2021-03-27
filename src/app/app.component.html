@@ -1,4 +1,9 @@
-<app-main-header></app-main-header>
-<div>
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
+
+
+<div #loadingMask class="loading-mask">
+  <div class="loading-mask-content">
+    <img src="../../assets/loading.gif" />
+    <h2 class="loading-mask-text">Loading...</h2>
+  </div>
 </div>

@@ -1,11 +1,26 @@
 * {
     color: rgb(27, 27, 27);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
 }
 
 .loading-mask {
-    background-color: rgba(255, 255, 255, 0.603);
+    background-color: rgba(102, 102, 102, 0.6);
     height: 100%;
+    left: 0;
     position: fixed;
     width: 100%;
+    top: 0;
+
+    & .loading-mask-content {
+        position: absolute;
+        top: calc(50% - 75px);
+        left: calc(50% - 100px);
+        box-shadow: 0 0 20px rgb(204, 204, 204);
+        text-align: center;
+
+        & .loading-mask-text {
+            color: white;
+        }
+    }
 }
