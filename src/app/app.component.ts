@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, ViewChildren } from '@angular/core';
-import { UIOptions } from './shared/ui-options.model';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { DataService } from './shared/data-utils/data.service';
+import { GlobalElement } from './shared/enums';
 import { UIUtilsService } from './shared/ui-utils/ui-utils.service';
 
 @Component({
@@ -13,14 +14,17 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   showMainLoadingElement: boolean;
 
-  constructor (private uiUtilsService: UIUtilsService) { }
+  constructor (
+    private dataService: DataService,
+    private uiUtilsService: UIUtilsService
+  ) { }
 
   ngOnInit(): void { }
 
   ngAfterViewInit(): void {
-    const uiOptions = new UIOptions();
-    uiOptions.loadingMask = this.loadingMask;
-    this.uiUtilsService.initializeUIUtilsService(uiOptions);
+    this.dataService.chosenCurrency = 'kr'; // TODO can use localStorage or rely on component
+
+    this.uiUtilsService.addGlobalElement(GlobalElement.LOADING, this.loadingMask);
 
     // test loading
     setTimeout(() => {

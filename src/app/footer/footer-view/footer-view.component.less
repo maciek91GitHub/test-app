@@ -1,17 +1,17 @@
 @import "../../shared/main-variables.less"; 
 
-.main-header {
-    align-items: center;
-    background-color: @color-main-background;
-    border-bottom: 2px solid @primary-color;
+.main-footer {
+    background-color: @primary-color;
+    border-top: 2px solid @primary-color;
+    bottom: 0;
     color: @primary-text-color;
     display: flex;
     flex-flow: nowrap row;
     font-weight: bold;
     height: 100px;
     justify-content: space-between;
-    padding: 0 25px;
-    max-width: 100%;
+    position: absolute;
+    width: 100%;
 
     & .nav-button {
         & p {

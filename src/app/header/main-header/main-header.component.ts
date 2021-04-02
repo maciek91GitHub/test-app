@@ -16,15 +16,15 @@ export class MainHeaderComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  onClickHome () {
+  onClickBanner () {
     if (!this.router.url.includes('/home')) {
       this.uiUtilsService.showLoading(true);
     }
     this.router.navigate(['/home'])
   }
 
-  onClick404 () {
-    this.router.navigate(['/404-or-any-non-existent-link'])
+  onClickMenuMobile () {
+    // showMenuMobile
   }
 
 }

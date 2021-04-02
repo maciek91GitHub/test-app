@@ -1,18 +1,20 @@
 <nav class="main-header">
     <div 
-        id="home"
+        id="menuMobile"
         role="button"
-        class="home-button nav-button"
-        (click)="onClickHome()"
+        class="menu-mobile-button nav-button"
+        (click)="onClickMenuMobile()"
     >
-        <img src="../../assets/home.png" />
+        <img src="../../assets/menu-more.png" />
     </div>
     <div
-        id="test-404"
+        id="banner"
         role="button"
-        class="nav-button"
-        (click)="onClick404()"
+        class="banner-button nav-button"
+        (click)="onClickBanner()"
     >
-        <p>Test 404</p>
+        <img class="banner-img" src="../../assets/OfficeSupplies.png" />
     </div>
+    <app-search></app-search>
+    <app-cart></app-cart>
 </nav>

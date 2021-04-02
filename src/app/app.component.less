@@ -1,14 +1,14 @@
 @import "./shared/main-variables.less"; 
 
 * {
-    color: rgb(27, 27, 27);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: @primary-text-color;
+    font-family: 'sans-serif', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
 }
 
 .loading-mask {
     .width-and-heigth-100();
-    background-color: rgba(102, 102, 102, 0.6);
+    background-color: @color-secondary-background;
     left: 0;
     position: fixed;
     top: 0;
@@ -17,11 +17,15 @@
         position: absolute;
         top: calc(50% - 75px);
         left: calc(50% - 100px);
-        box-shadow: 0 0 20px rgb(204, 204, 204);
+        box-shadow: 0 0 20px @color-main-background;
         text-align: center;
 
+        & .loading-mask-img {
+            background-color: @color-main-background;
+        }
+
         & .loading-mask-text {
-            color: white;
+            color: @color-main-background;
         }
     }
 }

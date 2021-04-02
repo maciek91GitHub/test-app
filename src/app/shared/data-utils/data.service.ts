@@ -5,6 +5,16 @@ import { Injectable } from "@angular/core";
 })
 export class DataService {
 
+  private _chosenCurrency: string;
+
+  get chosenCurrency () {
+    return this._chosenCurrency;
+  }
+
+  set chosenCurrency (chosenCurrency) {
+    this._chosenCurrency = chosenCurrency;
+  }
+
   // simulate getting data from API
   async getData() {
     return fetch("../../assets/mock/files.json")

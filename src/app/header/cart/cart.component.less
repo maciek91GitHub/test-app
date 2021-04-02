@@ -1,0 +1,41 @@
+@import "../../shared/main-variables.less";
+
+@thumbnail-size: 40px;
+
+:host {
+    align-items: center;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+    width: 400px;
+
+    & .cart-thumbnail {
+        height: @thumbnail-size;
+        width: @thumbnail-size;
+    }
+
+    & .cart-text {
+        font-size: 18px;
+        &.cart-count {
+            font-weight: normal;
+        }
+    }
+
+    & .cart-checkout-button {
+        .cursor-pointer();
+        background-color: @color-red-primary;
+        border-bottom: 2px solid @color-secondary-background;
+        border-right: 1px solid @color-secondary-background;
+        color: @color-main-background;
+        height: 26px;
+        padding-top: 10px;
+        text-align: center;
+        width: 150px;
+
+        &:hover {
+            background-color: @color-main-background;
+            box-shadow: 0 0 5px @color-red-primary;
+            color: @color-red-primary;
+        }
+    }
+}

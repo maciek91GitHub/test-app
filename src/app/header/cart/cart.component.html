@@ -1,0 +1,9 @@
+<img class="cart-thumbnail" src="../../assets/cart.png"/>
+<div #cartCount class="cart-text cart-count">{{ countText }}</div>
+<div #cartSum class="cart-text cart-sum">{{ sumText }}</div>
+<div class="cart-checkout-button"
+     role="button"
+     (click)="onCheckout()"
+>
+    Check out
+</div>

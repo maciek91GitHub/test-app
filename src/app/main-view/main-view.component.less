@@ -1,0 +1,14 @@
+@import "../shared/main-variables.less";
+
+:host {
+    .width-and-heigth-100();
+    display: flex;
+    flex-flow: column;
+
+    & .main-view {
+        height: 100%;
+        display: flex;
+        flex-flow: row;
+        width: 100%;
+    }
+}
