@@ -1,3 +1,14 @@
-<div class="featured-container">
-
-</div>
+<article class="featured-container">
+    <app-gallery-view [imageSrcs]="featuredItem?.imageSrcs || srcs"></app-gallery-view>
+    <div class="featured-item">
+        <h1 class="featured-item-header">{{ featuredItem?.name }}</h1>
+        <app-add-to-cart-view [prices]="featuredItem?.prices" [colors]="featuredItem?.colors"></app-add-to-cart-view>
+        <article class="featured-item-description"> {{ featuredItem?.descripton }} </article>
+        <div class="featured-cards">
+            <div class="featured-card" *ngFor="let subdescription of subdescriptions;">
+                <h2>{{ subdescription.label }}</h2>
+                <div class="subdescription">{{ subdescription.description }}</div>
+            </div>
+        </div>
+    </div>
+</article>

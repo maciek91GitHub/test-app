@@ -1,0 +1,48 @@
+@import "../../shared/main-variables.less";
+
+:host {
+    align-items: baseline;
+    border: 2px solid @color-secondary-background;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-flow: row nowrap;
+
+    & .price-container {
+        & h2 {
+            margin-bottom: 0;
+        }
+
+        & p {
+            margin-top: 5px;
+        }
+    }
+
+    & .select-color-input {
+        .cursor-pointer();
+        height: 32px;
+        width: 300px;
+
+        &:focus {
+            box-shadow: 0 0 5px @color-red-primary;
+        }
+    }
+
+    & .add-to-cart-button {
+        .cursor-pointer();
+        background-color: @color-red-primary;
+        border-right: 15px solid @color-warning;
+        color: @color-main-background;
+        font-weight: bold;
+        height: 26px;
+        padding-top: 10px;
+        text-align: center;
+        width: 130px;
+
+        &:hover {
+            background-color: @color-main-background;
+            box-shadow: 0 0 5px @color-red-primary;
+            color: @color-red-primary;
+        }
+    }
+}

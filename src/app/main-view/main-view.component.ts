@@ -16,7 +16,7 @@ export class MainViewComponent implements OnInit, AfterViewInit {
     // test loading
     setTimeout(() => {
       this.uiUtilsService.showLoading(false);
-    }, 2000);
+    }, 1000);
   }
 
 }

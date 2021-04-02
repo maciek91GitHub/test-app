@@ -27,6 +27,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.uiUtilsService.addGlobalElement(GlobalElement.LOADING, this.loadingMask);
 
     // test loading
+    this.uiUtilsService.showLoading(true);
     setTimeout(() => {
       this.uiUtilsService.showLoading(false);
     }, 2000);

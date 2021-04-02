@@ -15,6 +15,7 @@ export class CartComponent implements OnInit {
 
   count: number = 0;
   sum: number = 0;
+  chosenCurrency: string;
 
   constructor (
     private dataService: DataService,
@@ -28,7 +29,6 @@ export class CartComponent implements OnInit {
   onCheckout () {
     // open full cart view or cart dialog
     console.log('Check out clicked');
-    console.log(this.uiUtilsService.globalElements);
   }
 
   get countText () {
@@ -36,7 +36,13 @@ export class CartComponent implements OnInit {
   }
 
   get sumText () {
-    return `${this.sum} ${this.dataService.chosenCurrency || ''}`;
+    this.chosenCurrency = this.dataService.chosenCurrency;
+    return `${this.sum} kr`;
+  }
+
+  addToCart (price, quantity, color) {
+    this.sum += price;
+    this.count += quantity;
   }
 
 }

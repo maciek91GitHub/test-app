@@ -7,13 +7,10 @@ import { GlobalElement } from "../enums";
 export class UIUtilsService {
 
   globalElements = {};
+  loadingCounter = 0;
 
   initializeUIUtilsService (globalElements: any) {
     this.globalElements = globalElements;
-  }
-
-  showLoading (isShow) {
-    this.globalElements[GlobalElement.LOADING].nativeElement.style.display = isShow ? 'block' : 'none';
   }
 
   addGlobalElement (key, elementValue) {
@@ -22,6 +19,16 @@ export class UIUtilsService {
 
   getGlobalElement (key) {
     return this.globalElements[key];
+  }
+
+  showLoading (isShow) {
+    console.log(isShow, this.loadingCounter);
+    this.loadingCounter += isShow ? 1 : -1;
+    this.globalElements[GlobalElement.LOADING].nativeElement.style.display = this.loadingCounter > 0 ? 'block' : 'none';
+  }
+
+  addToCart(price, quantity, color) {
+    this.globalElements[GlobalElement.CART].addToCart(price, quantity, color);
   }
 
 }

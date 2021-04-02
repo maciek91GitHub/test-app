@@ -1,0 +1,17 @@
+<div class="price-container">
+    <h2>{{ netPrice }}</h2>
+    <p>{{ grossPrice }}</p>
+</div>
+<div>
+    <select class="select-color-input" #selectColor>
+        <option *ngFor="let color of colors;" id="color">{{color}}</option>
+    </select>
+</div>
+<div class="add-to-cart-container">
+    <div
+        class="add-to-cart-button"
+        role="button"
+        (click)="addToCart($event)">
+        Buy
+    </div>
+</div>

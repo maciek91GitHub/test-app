@@ -14,6 +14,8 @@ import { MainViewComponent } from './main-view/main-view.component';
 import { CategoriesSidebarComponent } from './main-view/categories-sidebar/categories-sidebar.component';
 import { FeaturedViewComponent } from './main-view/featured-view/featured-view.component';
 import { FooterViewComponent } from './footer/footer-view/footer-view.component';
+import { GalleryViewComponent } from './main-view/gallery-view/gallery-view.component';
+import { AddToCartViewComponent } from './main-view/add-to-cart-view/add-to-cart-view.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { FooterViewComponent } from './footer/footer-view/footer-view.component'
     MainViewComponent,
     CategoriesSidebarComponent,
     FeaturedViewComponent,
-    FooterViewComponent
+    FooterViewComponent,
+    GalleryViewComponent,
+    AddToCartViewComponent
   ],
   imports: [
     BrowserModule,

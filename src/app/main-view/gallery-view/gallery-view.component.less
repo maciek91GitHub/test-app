@@ -1,0 +1,33 @@
+@import "../../shared/main-variables.less"; 
+
+@main-image-size: 450px;
+@small-image-size: calc(450px/3);
+@images-select-border: 5px solid @color-red-primary;
+
+:host {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: column nowrap;
+
+    & .main-image {
+        border-right: @images-select-border;
+        border-color: @color-warning;
+        height: @main-image-size;
+        width: @main-image-size;
+    }
+
+    & .images-select {
+        .cursor-pointer();
+        border-right: @images-select-border;
+        border-top: @images-select-border;
+        width: @main-image-size;
+
+        & .image-item {
+            height: @small-image-size;
+            width: @small-image-size;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}

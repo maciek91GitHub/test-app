@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "Paper clips"
+    },
+    {
+      "id": 1,
+      "name": "Post-it notes"
+    },
+    {
+      "id": 2,
+      "name": "Staples"
+    },
+    {
+      "id": 3,
+      "name": "Hole punches"
+    },
+    {
+      "id": 4,
+      "name": "Binders"
+    },
+    {
+      "id": 5,
+      "name": "Staplers"
+    },
+    {
+      "id": 6,
+      "name": "Laminators"
+    },
+    {
+      "id": 7,
+      "name": "Writing utensils"
+    },
+    {
+      "id": 8,
+      "name": "Paper"
+    },
+    {
+      "id": 9,
+      "name": "Computers"
+    },
+    {
+      "id": 10,
+      "name": "Printers"
+    },
+    {
+      "id": 11,
+      "name": "Fax machines"
+    },
+    {
+      "id": 12,
+      "name": "Photocopiers"
+    },
+    {
+      "id": 13,
+      "name": "Cash registers"
+    },
+    {
+      "id": 14,
+      "name": "Office furniture"
+    },
+    {
+      "id": 15,
+      "name": "Chairs"
+    },
+    {
+      "id": 16,
+      "name": "Cubicles"
+    },
+    {
+      "id": 16,
+      "name": "Filing cabinet"
+    },
+    {
+      "id": 16,
+      "name": "Armoire desks"
+    }
+  ]
+}
+
+
+
+
+

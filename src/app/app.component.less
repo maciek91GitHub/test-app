@@ -2,13 +2,12 @@
 
 * {
     color: @primary-text-color;
-    font-family: 'sans-serif', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 16px;
 }
 
 .loading-mask {
     .width-and-heigth-100();
     background-color: @color-secondary-background;
+    display: none;
     left: 0;
     position: fixed;
     top: 0;
@@ -26,6 +25,7 @@
 
         & .loading-mask-text {
             color: @color-main-background;
+            font-size: 12px;
         }
     }
 }
